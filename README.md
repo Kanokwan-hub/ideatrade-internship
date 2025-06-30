@@ -76,9 +76,6 @@ The workflow combines predictions from multiple CSV files, filters for `"BUY"` s
 #### Sell Signal Exit (`predict_sell_signal`)
 - Use actual **sell signals** after `sleep_days`, and check if gain is at least **5%**
 
-#### Fixed Horizon Gain (`predict_cs15`)
-- Check if gain at day 15 is **≥ 7.5%**
-
 #### Combined Prediction (`predict_combined`)
 - Logical **OR** combination of:
   - Trailing Stop
