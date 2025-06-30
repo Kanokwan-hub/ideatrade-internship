@@ -58,6 +58,7 @@ This project aims to develop a **Machine Learning model** using the **Transforme
 ## 2. Thai Stock Buy Signal Analysis and Exit Strategy Evaluation
 This project analyzes **combined buy signals** from multiple analyst predictions on Thai stocks and evaluates their performance using several **exit strategies**, including trailing stops, sell signals, and fixed holding periods.
 The workflow combines predictions from multiple CSV files, filters for `"BUY"` signals only, and applies various exit strategies to validate those signals. It also summarizes accuracy statistics per analyst and per stock.
+### Main Files
 
 ---
 
@@ -87,8 +88,7 @@ The workflow combines predictions from multiple CSV files, filters for `"BUY"` s
   - Fixed Horizon Gain
 
 
-### Functions and Methods
-
+#### Functions and Methods
 | Function | Description |
 |---------|-------------|
 | `trailing_stop(df, stop_pct=0.05, sleep_days=5)` | Compute exit days based on trailing stop logic |
@@ -99,3 +99,7 @@ The workflow combines predictions from multiple CSV files, filters for `"BUY"` s
 | `calculate_holding_days(row)` | Estimate holding period until target gain |
 | `get_avg_holding_days(stock_name=None, analyst=None)` | Query average holding duration |
 | `get_analysts_for_stock(specific_stock, detailed_df)` | JSON summary of analyst performance for a stock |
+
+#### Notes
+- Accuracy thresholds and profit percentages such as **3%**, **5%**, and **7.5%** can be adjusted based on specific strategy requirements.
+- The variable `sleep_days` refers to the cooldown period (in days) after a buy signal before evaluating an exit condition.
