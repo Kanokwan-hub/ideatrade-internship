@@ -3,6 +3,11 @@
 
 This project aims to develop a **Machine Learning model** using the **Transformer architecture** to predict `Buy / Hold / Sell` signals for Thai stocks. The model leverages a combination of **OHLCV data**, **tick-level trading data**, and **technical indicators** to identify precise stock entry and exit points for decision-making in trading.
 
+### Main Files
+- `transformer.ipynb` — Main notebook for data processing, model training, and evaluation
+- `transformer_model.pth` — Trained Transformer model
+- `label_encoder.pkl` — Label encoder for transforming categorical labels (`Buy`, `Hold`, `Sell`) to model-readable format
+
 ---
 
 ## Workflow Overview
