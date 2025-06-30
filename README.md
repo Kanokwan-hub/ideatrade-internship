@@ -4,11 +4,9 @@
 This project aims to develop a **Machine Learning model** using the **Transformer architecture** to predict `Buy / Hold / Sell` signals for Thai stocks. The model leverages a combination of **OHLCV data**, **tick-level trading data**, and **technical indicators** to identify precise stock entry and exit points for decision-making in trading.
 
 ### Main Files
-- `transformer.ipynb` — Main notebook for data processing, model training, and evaluation
-- `transformer_model.pth` — Trained Transformer model
-- `label_encoder.pkl` — Label encoder for transforming categorical labels (`Buy`, `Hold`, `Sell`) to model-readable format
-
----
+- `transformer.ipynb` - Main notebook for data processing, model training, and evaluation
+- `transformer_model.pth` - Trained Transformer model
+- `label_encoder.pkl` - Label encoder for transforming categorical labels (`Buy`, `Hold`, `Sell`) to model-readable format
 
 ## Workflow Overview
 
@@ -59,9 +57,8 @@ This project aims to develop a **Machine Learning model** using the **Transforme
 This project analyzes **combined buy signals** from multiple analyst predictions on Thai stocks and evaluates their performance using several **exit strategies**, including trailing stops, sell signals, and fixed holding periods.
 The workflow combines predictions from multiple CSV files, filters for `"BUY"` signals only, and applies various exit strategies to validate those signals. It also summarizes accuracy statistics per analyst and per stock.
 ### Main Files
-- `pred_all.ipynb` — Main notebook for data loading, signal evaluation, and performance summary
-- `aira_pred.csv`, `fns_pred.csv`, `king_pred.csv`, `pi_pred.csv` — Input CSV files containing analyst predictions
----
+- `pred_all.ipynb` - Main notebook for data loading, signal evaluation, and performance summary
+- `aira_pred.csv`, `fns_pred.csv`, `king_pred.csv`, `pi_pred.csv` - Input CSV files containing analyst predictions
 
 ### Data Input
 - Load buy signal predictions from multiple CSV files (e.g. `pi_pred.csv`, `fns_pred.csv`, `king_pred.csv`, `aira_pred.csv`)
