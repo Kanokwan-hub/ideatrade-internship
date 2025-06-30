@@ -50,7 +50,7 @@ This project aims to develop a **Machine Learning model** using the **Transforme
   - Analyze **per-stock signal distribution** (Buy / Hold / Sell)
   - Display results using interactive or static visualizations
  
-## Thai Stock Buy Signal Analysis and Exit Strategy Evaluation
+## 2. Thai Stock Buy Signal Analysis and Exit Strategy Evaluation
 This project analyzes **combined buy signals** from multiple analyst predictions on Thai stocks and evaluates their performance using several **exit strategies**, including trailing stops, sell signals, and fixed holding periods.
 The workflow combines predictions from multiple CSV files, filters for `"BUY"` signals only, and applies various exit strategies to validate those signals. It also summarizes accuracy statistics per analyst and per stock.
 
