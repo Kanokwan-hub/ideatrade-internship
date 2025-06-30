@@ -65,7 +65,7 @@ The workflow combines predictions from multiple CSV files, filters for `"BUY"` s
 - Concatenate all files into a single DataFrame
 - Filter to keep only rows where `action` contains `"BUY"`
 
-### Signal Validation Logic
+### Signal Validation Logic :
 
 #### Initial Prediction (`predict`)
 - Check if `cs15` (closing price after 15 days) increases by at least **3%** from the entry price (`cs`)
