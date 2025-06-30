@@ -1,5 +1,5 @@
 # ideatrade-internship  
-## Thai Stock Signal Prediction using Transformer & Technical Indicators
+## 1. Thai Stock Signal Prediction using Transformer & Technical Indicators
 
 This project aims to develop a **Machine Learning model** using the **Transformer architecture** to predict `Buy / Hold / Sell` signals for Thai stocks. The model leverages a combination of **OHLCV data**, **tick-level trading data**, and **technical indicators** to identify precise stock entry and exit points for decision-making in trading.
 
@@ -50,42 +50,39 @@ This project aims to develop a **Machine Learning model** using the **Transforme
   - Analyze **per-stock signal distribution** (Buy / Hold / Sell)
   - Display results using interactive or static visualizations
  
-# Thai Stock Buy Signal Analysis and Exit Strategy Evaluation
+## Thai Stock Buy Signal Analysis and Exit Strategy Evaluation
 This project analyzes **combined buy signals** from multiple analyst predictions on Thai stocks and evaluates their performance using several **exit strategies**, including trailing stops, sell signals, and fixed holding periods.
 The workflow combines predictions from multiple CSV files, filters for `"BUY"` signals only, and applies various exit strategies to validate those signals. It also summarizes accuracy statistics per analyst and per stock.
 
 ---
 
-## Data Input
+### Data Input
 - Load buy signal predictions from multiple CSV files (e.g. `pi_pred.csv`, `fns_pred.csv`, `king_pred.csv`, `aira_pred.csv`)
 - Concatenate all files into a single DataFrame
 - Filter to keep only rows where `action` contains `"BUY"`
 
----
+### Signal Validation Logic
 
-## Signal Validation Logic
-
-### Initial Prediction (`predict`)
+#### Initial Prediction (`predict`)
 - Check if `cs15` (closing price after 15 days) increases by at least **3%** from the entry price (`cs`)
 
-### Trailing Stop Exit (`predict_trailing`)
+#### Trailing Stop Exit (`predict_trailing`)
 - Apply a **5% trailing stop loss** after a cooldown of `sleep_days` (default: 5 days), check at day 5, 10, 15
 
-### Sell Signal Exit (`predict_sell_signal`)
+#### Sell Signal Exit (`predict_sell_signal`)
 - Use actual **sell signals** after `sleep_days`, and check if gain is at least **5%**
 
-### Fixed Horizon Gain (`predict_cs15`)
+#### Fixed Horizon Gain (`predict_cs15`)
 - Check if gain at day 15 is **≥ 7.5%**
 
-### Combined Prediction (`predict_combined`)
+#### Combined Prediction (`predict_combined`)
 - Logical **OR** combination of:
   - Trailing Stop
   - Sell Signal
   - Fixed Horizon Gain
 
----
 
-## Functions and Methods
+### Functions and Methods
 
 | Function | Description |
 |---------|-------------|
