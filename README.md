@@ -8,7 +8,7 @@ This project aims to develop a **Machine Learning model** using the **Transforme
 - `transformer_model.pth` - Trained Transformer model
 - `label_encoder.pkl` - Label encoder for transforming categorical labels (`Buy`, `Hold`, `Sell`) to model-readable format
 
-## Workflow Overview
+### Workflow Overview
 
 ### Step 1: Load Stock Data from MySQL
 - Retrieve daily OHLCV stock data from the `stock_hloc` table using `pymysql`
